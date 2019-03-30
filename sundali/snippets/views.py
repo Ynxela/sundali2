@@ -4,6 +4,7 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 from snippets.models import Snippet
 from snippets.serializers import SnippetSerializer
+from django.shortcuts import render
 
 @csrf_exempt
 def snippet_list(request):
@@ -48,3 +49,8 @@ def snippet_detail(request, pk):
     elif request.method == 'DELETE':
         snippet.delete()
         return HttpResponse(status=204)
+
+
+@csrf_exempt
+def snippet_root(request):
+    return render(request, 'frontend/dist/index.html')
