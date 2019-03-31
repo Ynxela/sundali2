@@ -31,18 +31,25 @@ def getMachinesLocation(request):
                              'task_type_cd': 0,
                          },
                          {
-                             'coordinates': [55.8072856, 37.536643],
+                             'coordinates': [55.8372856, 37.516643],
                              'machine_name': 'Car 2',
                              'task_status_cd': 'IN_PROGRESS',
                              'machine_id': 2,
-                             'task_type_cd': 0,
+                             'task_type_cd': 1,
                          },
                          {
-                             'coordinates': [55.8072856, 37.536643],
+                             'coordinates': [55.8172856, 37.506643],
                              'machine_name': 'Car 3',
                              'task_status_cd': 'IN_PROGRESS',
                              'machine_id': 3,
-                             'task_type_cd': 0,
+                             'task_type_cd': 2,
+                         },
+                         {
+                             'coordinates': [55.8032856, 37.501643],
+                             'machine_name': 'Car 4',
+                             'task_status_cd': 'IN_PROGRESS',
+                             'machine_id': 4,
+                             'task_type_cd': 1,
                          },
                      ],})
 
