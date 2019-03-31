@@ -1,0 +1,255 @@
+@import 'fonts.css';
+body {
+    margin: 0;
+    padding: 0;
+    color: #262A34;
+    font-family: 'GothamPro';
+    background-color: #F5F6FA;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* grid container */
+.container {
+    display: grid;
+    grid-template-areas: 'menu main info';
+    grid-template-columns: 100px 1fr 537px;
+    height: 100vh;
+}
+
+
+/* menu left */
+.menu {
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-right: 2px solid #EBECF1;
+   
+}
+
+.menu__list {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.message {
+    position: relative;
+    border-bottom: 2px solid #EBECF1;
+    background-color: #fff;
+}
+
+.message__button, .menu__link {
+    height: 100px;
+    width: 100px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.message__button:hover svg path,
+.menu__link:hover svg path {
+    transition: fill 1s ease-in-out;
+}
+
+.message__button:hover svg path,
+.menu__link:hover svg path {
+    fill: #263034;
+}
+
+
+.message__button--active::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: red;
+    transform: translate(10px, -10px);
+}
+
+.menu__link--active svg path {
+    fill: #0082FF;
+}
+
+.menu__link--active::before{
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 48px;
+    display: block;
+    background-color: #0082FF;
+    border-radius: 30px;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+}
+
+.menu__link--active:hover svg path {
+    fill: #0082FF;
+}
+
+/* message info */
+.message__info {
+    position: absolute;
+    border-radius: 10px;
+    top: 30px;
+    right: -435px;
+    width: 405px;
+    min-height: 528px;
+    transform: translateY(-110%);
+    transition: transform 1s ease;
+    box-shadow: 5px 5px 46px rgba(0,0,0,.7);
+    background-color: #fff;
+}
+
+.message__info--active {
+    transform: translateY(0);
+}
+
+.message__item {
+    border-bottom: 1px solid #EBECF1;
+    padding: 10px 100px 10px 90px;
+    position: relative;
+}
+
+.message__item span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.message__item p {
+    font-size: 14px;
+    margin: .5em 0;
+}
+
+.message img {
+    margin-bottom: 7px;
+}
+
+.message__item time {
+    display: block;
+    color: #7E8E95;
+    font-size: 14px;
+}
+
+.message__info a {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 18px;
+}
+
+.message__item.foto::before {
+    content: url('../img/icon-foto.svg');
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.message__item.error::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #D95252;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.message__item.error::after {
+    content: url('../img/car.svg');
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+
+/* main  */
+.main {
+    grid-area: main;
+    background-image: url('../img/bg.png');
+    background-size: cover;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.main-menu li {
+    width: 235px;
+    height: 55px;
+    margin: 0 8px;
+    background-color: #fff;
+    border: 10px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.main-menu li::before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin: 0 19px;
+    border-radius: 50%;
+    border: 3px solid;
+}
+
+.main-menu li:nth-child(1)::before {
+    background-color: #D95252;
+    border-color: #954B4B;
+}
+
+.main-menu li:nth-child(2)::before {
+    background-color: #DEB18A;
+    border-color: #8D6542;
+}
+
+.main-menu li:nth-child(3)::before {
+    background-color: #79BAFC;
+    border-color: #4E759D;
+}
+
+.main-menu li:nth-child(4)::before {
+    background-color: #FFFFFF;
+    border-color: #262A34;
+}
+
+.main-menu li:nth-child(5)::before {
+    background-color: #9DD17D;
+    border-color: #558339;
+}
+
+/* info */
+.task {
+
+}
