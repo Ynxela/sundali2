@@ -42,6 +42,39 @@ def getMachinesLocation(request):
 
 
 @api_view(['GET', 'POST'])
+def getMachineInformation(request):
+    return JsonResponse({'cars': [
+        {
+            'machine_name': 'Car 1',
+            'task_status_cd': 'FAIL',
+            'machine_id': 1,
+            'machine_type': 0,
+            'machine_state': 'Поломка',
+            'machine_number': 'EA789A 77',
+            'machine_description': 'Машина уборочная вакуумного типа'
+        },
+        {
+            'machine_name': 'Car 2',
+            'task_status_cd': 'IN_PROGRESS',
+            'machine_id': 2,
+            'machine_type': 1,
+            'machine_state': 'На задании',
+            'machine_number': 'АУ779В 77',
+            'machine_description': 'Машина уборочная вакуумного типа'
+        },
+        {
+            'machine_name': 'Car 3',
+            'task_status_cd': 'IN_PROGRESS',
+            'machine_id': 3,
+            'machine_type': 2,
+            'machine_state': 'На задании',
+            'machine_number': 'ВС659A 77',
+            'machine_description': 'Машина уборочно-подметалельная'
+        },
+    ], })
+
+
+@api_view(['GET', 'POST'])
 def getMachinesDepo(request):
     return JsonResponse({'cars': [
         {

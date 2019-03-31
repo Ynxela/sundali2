@@ -7,4 +7,5 @@ urlpatterns = [
     path('tasks/', views.get_all_tasks),
     path('getMachinesLocation/', views.getMachinesLocation),
     path('getMachinesDepo/', views.getMachinesDepo),
+    path('getMachineInformation/', views.getMachineInformation),
 ]
