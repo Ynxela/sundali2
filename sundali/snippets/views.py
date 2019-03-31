@@ -54,7 +54,7 @@ def get_all_tasks(request):
 
 @csrf_exempt
 def snippet_root(request):
-    return render(request, 'frontend/dist/index.html')
+    return render(request, 'index.html')
 
 
 @csrf_exempt
