@@ -1,4 +1,5 @@
 @import 'fonts.css';
+
 body {
     margin: 0;
     padding: 0;
@@ -16,7 +17,8 @@ p {
     box-sizing: border-box;
 }
 
-ul, li {
+ul,
+li {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -54,7 +56,8 @@ ul, li {
     background-color: #fff;
 }
 
-.message__button, .menu__link {
+.message__button,
+.menu__link {
     height: 100px;
     width: 100px;
     display: inline-flex;
@@ -91,7 +94,7 @@ ul, li {
     fill: #0082FF;
 }
 
-.menu__link--active::before{
+.menu__link--active::before {
     position: absolute;
     content: '';
     width: 3px;
@@ -118,7 +121,7 @@ ul, li {
     min-height: 528px;
     transform: translateY(-110%);
     transition: transform 1s ease;
-    box-shadow: 5px 5px 46px rgba(0,0,0,.7);
+    box-shadow: 5px 5px 46px rgba(0, 0, 0, .7);
     background-color: #fff;
 }
 
@@ -507,8 +510,8 @@ a.track__button {
 }
 
 .depo__list {
-   width: 1195px;
-   padding-right: 300px; 
+    width: 1195px;
+    padding-right: 300px;
 }
 
 .depo__list--row {
@@ -567,6 +570,7 @@ a.track__button {
     margin-left: -20px;
     margin-bottom: 30px;
 }
+
 .statistic b {
     display: block;
     font-size: 24px;
@@ -576,6 +580,7 @@ a.track__button {
 .statistic p {
     font-size: 18px;
     margin-bottom: 50px;
+<<<<<<< HEAD
 }
 
 /* new depo */
@@ -644,3 +649,6 @@ a.track__button {
 }
 
 
+=======
+}
+>>>>>>> 909698c9cfc86b6a4ac4dae9112713a52c037e45

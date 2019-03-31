@@ -24,7 +24,9 @@ SECRET_KEY = '_jjx!aeimghii$#_tf2*zyb)0$&&mazwxtojvt4prq+xx##dlv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['31.31.192.245',
+                 'localhost',
+                 '127.0.0.1']
 
 # Application definition
 
@@ -127,8 +129,10 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = (
     'localhost:8000',
     'localhost:8080',
+    '31.31.192.245:8000'
 )
 CORS_ORIGIN_REGEX_WHITELIST = (
     'localhost:8000',
     'localhost:8080',
+    '31.31.192.245:8000'
 )
