@@ -95,8 +95,10 @@ getDepotLocation\
     * task_status_cd
 
 * Точки задания
-    * task_id (pk)
-    * point_id (pk)
+    * itinerary_id (pk)
+    * task_id  (fk)
+    * point_id (fk)
+    * order_num (номер точки в маршруте)
     * latitude
     * longitude    
    
