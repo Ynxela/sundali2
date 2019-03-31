@@ -1,33 +1,16 @@
 from django.db import models
-from pygments.lexers import get_all_lexers
-from pygments.styles import get_all_styles
 
-LEXERS = [item for item in get_all_lexers() if item[1]]
-LANGUAGE_CHOICES = sorted([(item[1][0], item[0]) for item in LEXERS])
-STYLE_CHOICES = sorted((item, item) for item in get_all_styles())
 POINT_TYPE_CHOICES = (
     ('D', 'Depot'),
     ('L', 'Location'),
 )
 
 
-class Snippet(models.Model):
-    created = models.DateTimeField(auto_now_add=True)
-    title = models.CharField(max_length=100, blank=True, default='')
-    code = models.TextField()
-    linenos = models.BooleanField(default=False)
-    language = models.CharField(choices=LANGUAGE_CHOICES, default='python', max_length=100)
-    style = models.CharField(choices=STYLE_CHOICES, default='friendly', max_length=100)
-
-    class Meta:
-        ordering = ('created',)
-
-
 class Vehicle(models.Model):
     machine_id = models.AutoField(primary_key=True)
     machine_name = models.CharField(max_length=100, blank=True, default='')
-    machine_type = models.IntegerField()
-    readiness = models.TextField(blank=True)
+    machine_type = models.CharField(max_length=100, blank=True, default='')
+    readiness = models.CharField(max_length=100, blank=True, default='')
 
     class Meta:
         ordering = ('machine_id',)
@@ -54,10 +37,12 @@ class MainGraph(models.Model):
 
 
 class TaskPoints(models.Model):
-    task_id = models.AutoField(primary_key=True)
-    point_id = models.AutoField(primary_key=True)
+    itinerary_id = models.AutoField(primary_key=True)
+    task_id = models.ForeignKey(Tasks, on_delete=models.CASCADE)
+    point_id = models.ForeignKey(MainGraph, on_delete=models.CASCADE)
+    order_num = models.IntegerField()
     latitude = models.FloatField()
     longitude = models.FloatField()
 
     class Meta:
-        ordering = ('task_id',)
+        ordering = ('itinerary_id',)
