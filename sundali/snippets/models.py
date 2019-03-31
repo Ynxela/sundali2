@@ -17,3 +17,21 @@ class Snippet(models.Model):
 
     class Meta:
         ordering = ('created',)
+
+
+class Vehicle(models.Model):
+    machine_id = models.AutoField(primary_key=True)
+    machine_name = models.CharField(max_length=100, blank=True, default='')
+    machine_type = models.IntegerField()
+    readiness = models.TextField(blank=True)
+
+    class Meta:
+        ordering = ('machine_id',)
+
+
+class Tasks(models.Model):
+    task_id = models.AutoField(primary_key=True)
+    machine_id = models.IntegerField()
+
+    class Meta:
+        ordering = ('task_id',)
