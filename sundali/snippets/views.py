@@ -5,7 +5,19 @@ from rest_framework.parsers import JSONParser
 from snippets.models import Vehicle, Tasks
 from snippets.serializers import VehicleSerializer, TasksSerializer
 from django.shortcuts import render
+from rest_framework.decorators import api_view
 
+
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import authentication, permissions
+from django.contrib.auth.models import User
+
+
+
+@api_view(['GET', 'POST'])
+def getMachinesLocation(request):
+    return Response({"coordinates": [55.8072856, 37.536643]})
 
 @csrf_exempt
 def get_all_machines(request):
