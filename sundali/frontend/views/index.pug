@@ -79,7 +79,42 @@ html(lang="en")
                         span PA47PA
                         span 13:20
             
-            //- .track
+        .container
+            .menu
+                .message
+                    .message__button
+                        | !{icons['message']}
+                    .message__info
+                        ul
+                            li.message__item.error
+                                span Р426F2
+                                p Произошел сбой на точке «Кинотеатр Нева»
+                            li.message__item.foto
+                                span Новое предложение
+                                p Ул. Нового Рокосовского 54
+                                img(src="img/foto.png", alt="")
+                                time Сегодня в 17:36
+                            li.message__item.foto
+                                span Новое предложение
+                                p Ул. Нового Рокосовского 54
+                                img(src="img/foto.png", alt="")
+                                time Сегодня в 17:36
+                            li.message__item.error
+                                span Р426F2
+                                p Произошел сбой на точке «Кинотеатр Нева»
+                            li.message__item.error
+                                span Р426F2
+                                p Произошел сбой на точке «Кинотеатр Нева»
+                        a показать все
+                    
+                .menu__list
+                    .menu__link.menu__link--active
+                        | !{icons['map']}
+                    .menu__link
+                        | !{icons['road']}
+                    .menu__link
+                        | !{icons['analytics']}
+            .track
                 .track__img-wrap
                     img(src="img/track.png", alt="")
                     span.close
@@ -102,8 +137,70 @@ html(lang="en")
                         li Метро Войковская
                         li Депа #325
                     a.track__button Отозвать
-
-
-                        
-
-        
+        // depo
+        .container
+            .menu
+                .message
+                    .message__button
+                        | !{icons['message']}
+                    .message__info
+                        ul
+                            li.message__item.error
+                                span Р426F2
+                                p Произошел сбой на точке «Кинотеатр Нева»
+                            li.message__item.foto
+                                span Новое предложение
+                                p Ул. Нового Рокосовского 54
+                                img(src="img/foto.png", alt="")
+                                time Сегодня в 17:36
+                            li.message__item.foto
+                                span Новое предложение
+                                p Ул. Нового Рокосовского 54
+                                img(src="img/foto.png", alt="")
+                                time Сегодня в 17:36
+                            li.message__item.error
+                                span Р426F2
+                                p Произошел сбой на точке «Кинотеатр Нева»
+                            li.message__item.error
+                                span Р426F2
+                                p Произошел сбой на точке «Кинотеатр Нева»
+                        a показать все
+                    
+                .menu__list
+                    .menu__link.menu__link--active
+                        | !{icons['map']}
+                    .menu__link
+                        | !{icons['road']}
+                    .menu__link
+                        | !{icons['analytics']}
+            .track
+                .track__img-wrap
+                    img(src="img/track.png", alt="")
+                    span.close
+                .track__content
+                    h2 B234GG
+                    span Сухая уборка
+                    b Машина
+                    P Малая многофункциональная вакуумная подметально-уборочная машина ПУМ-5021С
+                    b В задании
+                    p D324F2
+                    .track--err
+                        b Ошибка
+                        p Произошел сбой на точке «Кинотеатр Нева»
+                    b Маршрут
+                    ul.track__path
+                        li Депо #325 
+                            span (-72.328777, 76.346179)
+                        li Кинотеатр Нева
+                        li Флотская улица
+                        li Метро Войковская
+                        li Депа #325
+                    a.track__button Отозвать
+            .depo
+                h2 Депо #325
+                .depo__header
+                    span Тип машины
+                    span Номер машины
+                    span Тип уборки
+                    span Состояние
+                    span Статус готовности
