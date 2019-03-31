@@ -114,7 +114,7 @@ ul, li {
     border-radius: 10px;
     top: 30px;
     right: -435px;
-    width: 405px;
+    width: 395px;
     min-height: 528px;
     transform: translateY(-110%);
     transition: transform 1s ease;
@@ -128,7 +128,7 @@ ul, li {
 
 .message__item {
     border-bottom: 1px solid #EBECF1;
-    padding: 10px 100px 10px 90px;
+    padding: 10px 80px 10px 90px;
     position: relative;
 }
 
@@ -180,14 +180,14 @@ ul, li {
     transform: translateY(-50%);
 }
 
-.message__item.error::after {
+/* .message__item.error::after {
     content: url('../img/car.svg');
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
 
-}
+} */
 
 
 /* main  */
@@ -249,7 +249,217 @@ ul, li {
     border-color: #558339;
 }
 
-/* info */
+/* task */
 .task {
+    grid-area: info;
+    padding: 45px;
+}
 
+.task h2 {
+    font-size: 38px;
+    margin: 0;
+    margin-bottom: 58px;
+}
+
+.task__subtitle span {
+    font-size: 22px;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    margin-bottom: 87px;
+    display: inline-block;
+}
+
+.task__subtitle span:first-child {
+    color: #0082FF;
+}
+
+.task__subtitle span:first-child::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: #0082FF;
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+}
+
+.task__subtitle span:last-child {
+    padding-left: 100px
+}
+
+.task__row {
+    width: 295px;
+    height: 66px;
+    display: flex;
+    background-color: #fff;
+    margin-bottom: 33px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    box-shadow: 0px 0px 20px #C1C1C1;
+}
+
+.task__row::before {
+    content: '';
+    width: 2px;
+    height: 80%;
+    background-color: #EBECF1;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.task__row::after {
+    content: '';
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    border-radius: 50%;
+    display: block;
+    background-color: #9BD952;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -50px;
+}
+
+.task__row:nth-child(5)::after {
+    background-color: #D95252;
+}
+
+.task__row span {
+    display: inline-flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* track */
+.track {
+    grid-area: info;
+}
+
+.track__img-wrap {
+    height: 400px;
+    display: flex;
+}
+
+.track__img-wrap img {
+    margin: auto;
+}
+
+.track__content {
+    padding-left: 72px;
+    padding-right: 22px;
+    background-color: #fff;
+    padding-top: 60px;
+}
+
+.track__content h2 {
+    font-size: 38px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.track__content h2::after {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #D95252;
+    margin-left: 36px;
+}
+
+.track__content span {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    color: #7E8E95;
+    margin-bottom: 50px;
+}
+
+.track__content b {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 24px;
+
+}
+
+.track__content p {
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.track__path {
+    position: relative;
+}
+
+.track__path::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 110%;
+    width: 2px;
+    background-color: #EBECF1;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.track__path span {
+    display: inline-block;
+    margin: 0;
+    font-size: 18px;
+}
+
+.track__path li {
+    font-size: 18px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.track__path li::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    top: 50%;
+    left: -33px;
+    background-color: #7E8E95;
+}
+
+.track__path li:first-child::before,
+.track__path li:last-child::before {
+    background-color: #0082FF;
+}
+
+.track__path li:nth-child(2)::before {
+    content: '!';
+    background-color: transparent;
+    font-size: 30px;
+    transform: translateY(-13px);
+    color: #D95252;
+}
+
+a.track__button {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 50px auto 38px;
+    display: block;
+    width: 364px;
+    height: 80px;
+    border-radius: 40px;
+    background-image: linear-gradient(#0082FF, #339BFF);
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+    box-shadow: 0 3px 20px #0082FF;
 }
