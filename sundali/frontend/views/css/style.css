@@ -253,7 +253,6 @@ ul, li {
 .task {
     grid-area: info;
     padding: 45px;
-    transform: translateX(100%);
 }
 
 .task h2 {
