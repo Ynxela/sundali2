@@ -3,6 +3,9 @@ from snippets.models import Tasks, Vehicle, POINT_TYPE_CHOICES
 
 
 class VehicleSerializer(serializers.Serializer):
+    class Meta:
+        model = Vehicle
+
     machine_id = serializers.IntegerField(read_only=True)
     machine_name = serializers.CharField(required=False, allow_blank=True, max_length=100)
     machine_type = serializers.IntegerField()
@@ -27,6 +30,11 @@ class VehicleSerializer(serializers.Serializer):
 
 
 class TasksSerializer(serializers.Serializer):
+    class Meta:
+        model = Tasks
+
+    vehicle = VehicleSerializer(read_only=True)
+
     task_id = serializers.IntegerField(read_only=True)
     machine_id = serializers.IntegerField()
 

@@ -6,6 +6,7 @@ from snippets.models import Vehicle, Tasks
 from snippets.serializers import VehicleSerializer, TasksSerializer
 from django.shortcuts import render
 from rest_framework.decorators import api_view
+from rest_framework import viewsets
 
 
 from rest_framework.views import APIView
@@ -54,6 +55,12 @@ def get_all_tasks(request):
 @csrf_exempt
 def snippet_root(request):
     return render(request, 'frontend/dist/index.html')
+
+
+@csrf_exempt
+class ViewMachineLocations(viewsets.ModelViewSet):
+    queryset = Tasks.objects.all()
+    serializer_class = TasksSerializer
 
 
 
