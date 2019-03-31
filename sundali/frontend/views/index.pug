@@ -12,7 +12,7 @@ html(lang="en")
     body
 
         // statistic
-        .statistic
+        //- .statistic
             h2.statistic__title Статистика
             b Погода
             img(src="img/weather.png" width="439" height="210")
@@ -25,7 +25,52 @@ html(lang="en")
             b Ошибки:
             p 2 машины
             b Всего машин в дело:
-            P Имеется 6 машины            
+            P Имеется 6 машины 
+
+        .depo
+            h2.depo__title Депо #325
+            ul.depo__list
+                li.depo__header
+                    .depo__elem Тип машины
+                    .depo__elem Номер машины
+                    .depo__elem Тип Уборки
+                    .depo__elem Состояние
+                    .depo__elem Статус готовности
+                li.depo__row
+                    .depo__inner
+                        .depo__elem
+                            img(src="img/road.svg")
+                        .depo__elem A323AA
+                        .depo__elem Сухая уборка
+                        .depo__elem На задании(D324F2)
+                    .depo__state
+                li.depo__row                
+                    .depo__inner
+                        .depo__elem
+                            img(src="img/garbage-truck.svg")
+                        .depo__elem Сухая уборка
+                        .depo__elem A323AA
+                        .depo__elem На задании(D324F2)
+                    .depo__state                    
+                li.depo__row                    
+                    .depo__inner
+                        .depo__elem
+                            img(src="img/garbage-truck.svg")
+                        .depo__elem A323AA
+                        .depo__elem Сухая уборка
+                        .depo__elem На задании(D324F2)
+                    .depo__state                    
+                li.depo__row                    
+                    .depo__inner
+                        .depo__elem
+                            img(src="img/garbage-truck.svg")
+                        .depo__elem A323AA
+                        .depo__elem Сухая уборка
+                        .depo__elem На задании(D324F2)
+                    .depo__state
+                    
+
+
                 
 //-             .menu
 //-                 .message
