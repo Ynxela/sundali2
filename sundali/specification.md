@@ -101,7 +101,7 @@ getDepotLocation\
     * longitude    
    
 * Устройства
-    * machine_id (fk)
+    * machine_id (pk)
     * machine_name
     * machine_type_cd
     * readiness 
