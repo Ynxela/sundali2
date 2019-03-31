@@ -8,17 +8,44 @@ from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework import viewsets
 
-
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import authentication, permissions
 from django.contrib.auth.models import User
 
 
+# @api_view(['GET', 'POST'])
+# def getMachinesLocation(request):
+#     return Response([{"coordinates": [55.8072856, 37.536643]}])
+#
 
 @api_view(['GET', 'POST'])
 def getMachinesLocation(request):
-    return Response({"coordinates": [55.8072856, 37.536643]})
+    return JsonResponse({"coordinates": [55.7963846, 37.536643],
+                     'markers': [
+                         {
+                             'coordinates': [55.8072856, 37.536643],
+                             'machine_name': 'Car 1',
+                             'task_status_cd': 'FAIL',
+                             'machine_id': 1,
+                             'task_type_cd': 0,
+                         },
+                         {
+                             'coordinates': [55.8072856, 37.536643],
+                             'machine_name': 'Car 2',
+                             'task_status_cd': 'IN_PROGRESS',
+                             'machine_id': 2,
+                             'task_type_cd': 0,
+                         },
+                         {
+                             'coordinates': [55.8072856, 37.536643],
+                             'machine_name': 'Car 3',
+                             'task_status_cd': 'IN_PROGRESS',
+                             'machine_id': 3,
+                             'task_type_cd': 0,
+                         },
+                     ],})
+
 
 @csrf_exempt
 def get_all_machines(request):
@@ -61,8 +88,6 @@ def snippet_root(request):
 class ViewMachineLocations(viewsets.ModelViewSet):
     queryset = Tasks.objects.all()
     serializer_class = TasksSerializer
-
-
 
 # 4xamples
 # @csrf_exempt
